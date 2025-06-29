@@ -7,6 +7,51 @@ export default function ResumePage({ isActive }) {
         <h2 className="h2 article-title">Resume</h2>
       </header>
 
+{/* resume download button */}
+<section className="resumeDownload">
+<a
+  href="/assets/pdf/Priyanshu_Purohit_Resume_2025.pdf"
+  download
+  target="_blank"
+  rel="noopener noreferrer"
+  title="Resume Priyanshu Purohit"
+  className="form-btn"
+  style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", color: "hsl(45, 100%, 72%)", textDecoration: "none" }}
+>
+  <ion-icon name="download" role="img" class="md hydrated" aria-label="paper plane"></ion-icon>
+  <span>Download Resume</span>
+</a>
+</section>
+ {/* Experience Section */}
+      <section className="timeline">
+        <div className="title-wrapper">
+          <div className="icon-box">
+            <ion-icon name="briefcase-outline"></ion-icon>
+          </div>
+          <h3 className="h3">Experience</h3>
+        </div>
+
+        <ol className="timeline-list">
+          {[
+            { title: "Technical Project Manager | Tech Arch Softwares", year: "(2024 - Present)" },
+            { title: "Project Management Associate | GenY Medium", year: "(2024)" },
+            { title: "Website Lead | Himtech", year: "(2023 - 2024)" },
+            { title: "Project Lead & Software Engineer | Pincox", year: "(2021 - 2023)" },
+            { title: "Project Manager / Coordinator (Freelance)", year: "(2020 - 2021)" },
+            { title: "Web Development Intern | Technowebtech", year: "(2020)" },
+            { title: "Data Science & Cybersecurity Intern | The TechIntern", year: "(2020)" },
+          ].map((exp, index) => (
+            <li key={index} className="timeline-item">
+              <h4 className="h4 timeline-item-title">{exp.title}</h4>
+              <span>{exp.year}</span>
+              <p className="timeline-text">
+                Managed multiple projects, led teams, and implemented efficient workflows using Agile methodologies. Hands-on experience in web development, cloud solutions, and IT strategy.
+              </p>
+            </li>
+          ))}
+        </ol>
+      </section>
+
       {/* Education Section */}
       <section className="timeline">
         <div className="title-wrapper">
@@ -33,62 +78,6 @@ export default function ResumePage({ isActive }) {
         </ol>
       </section>
 
-      {/* Experience Section */}
-      <section className="timeline">
-        <div className="title-wrapper">
-          <div className="icon-box">
-            <ion-icon name="briefcase-outline"></ion-icon>
-          </div>
-          <h3 className="h3">Experience</h3>
-        </div>
-
-        <ol className="timeline-list">
-          {[
-            { title: "Technical Project Manager | Tech Arch Softwares", year: "(2024 - Present)" },
-            { title: "Project Management Associate | GenY Medium", year: "(2023 - 2024)" },
-            { title: "Project Lead & Software Engineer | Pincox", year: "(2021 - 2023)" },
-            { title: "Website Lead | Himtech", year: "(2023 - 2024)" },
-            { title: "Project Manager / Coordinator (Freelance)", year: "(2020 - 2021)" },
-            { title: "Web Development Intern | Technowebtech", year: "(2020)" },
-            { title: "Data Science & Cybersecurity Intern | The TechIntern", year: "(2020)" },
-          ].map((exp, index) => (
-            <li key={index} className="timeline-item">
-              <h4 className="h4 timeline-item-title">{exp.title}</h4>
-              <span>{exp.year}</span>
-              <p className="timeline-text">
-                Managed multiple projects, led teams, and implemented efficient workflows using Agile methodologies. Hands-on experience in web development, cloud solutions, and IT strategy.
-              </p>
-            </li>
-          ))}
-        </ol>
-      </section>
-
-      {/* Skills Section */}
-      <section className="skill">
-        <h3 className="h3 skills-title">My Skills</h3>
-
-        <ul className="skills-list content-card">
-          {[
-            { name: "Project Management", value: 75 },
-            { name: "Agile & Scrum Methodologies", value: 70 },
-            { name: "Web Development (PHP, Laravel, React.js)", value: 80 },
-            { name: "IT Strategy & Business Analysis", value: 80 },
-            { name: "Cloud Computing & AWS", value: 70 },
-            { name: "Cybersecurity Fundamentals", value: 70 },
-          ].map((skill, index) => (
-            <li key={index} className="skills-item">
-              <div className="title-wrapper">
-                <h5 className="h5">{skill.name}</h5>
-                <data value={skill.value}>{skill.value}%</data>
-              </div>
-
-              <div className="skill-progress-bg">
-                <div className="skill-progress-fill" style={{ width: `${skill.value}%` }}></div>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </section>
     </article>
   );
 }

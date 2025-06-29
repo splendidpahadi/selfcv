@@ -5,6 +5,7 @@ import Sidebar from "../components/sidebar";
 import Navbar from "../components/navbar";
 import AboutPage from "../components/about";
 import ResumePage from "../components/resume";
+import SkillsPage from "../components/skills";
 import PortfolioPage from "../components/portfolio";
 import ContactPage from "../components/contact";
 
@@ -38,6 +39,7 @@ export default function Home() {
         <Navbar activePage={activePage} onPageChange={handlePageChange} />
         {activePage === "about" && <AboutPage isActive={true} onOpenModal={handleOpenModal} />}
         {activePage === "resume" && <ResumePage isActive={true} />}
+        {activePage === "skills" && <SkillsPage isActive={true} />}
         {activePage === "portfolio" && <PortfolioPage isActive={true} />}
         {activePage === "contact" && <ContactPage isActive={true} />}
       </div>

@@ -14,7 +14,7 @@ export default function Sidebar() {
             src="/assets/images/my-avatar.png"
             alt="Priyanshu Purohit"
             width={120}
-            height={150}
+            height={120}
             priority
           />
         </figure>
@@ -23,7 +23,7 @@ export default function Sidebar() {
           <h1 className="name" title="Priyanshu Purohit">
             Priyanshu Purohit
           </h1>
-          <p className="title">Technical Project Manager | Web Developer</p>
+          <p className="title">IT Project Manager | Web Developer</p>
         </div>
 
         <button

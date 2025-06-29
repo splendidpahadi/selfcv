@@ -7,8 +7,8 @@ export default function Navbar({ activePage, onPageChange }) {
         {[
           { name: "About", key: "about" },
           { name: "Resume", key: "resume" },
+          { name: "Skills", key: "skills" },
           { name: "Portfolio", key: "portfolio" },
-          // { name: "Blog", key: "blog" },
           { name: "Contact", key: "contact" },
         ].map(({ name, key }) => (
           <li key={key} className="navbar-item">
