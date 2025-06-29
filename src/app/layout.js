@@ -4,18 +4,25 @@ import BackgroundAnimation from "../components/BackgroundAnimation";
 
 export const metadata = {
   title: "SplendidPahadi",
-  description: "Personal portfolio",
+  description: "Personal portfolio and resume website",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="shortcut icon" href="/assets/images/mylogo.webp" type="image/x-icon" />
-        <meta name="description" content="Personal portfolio and resume website" />
+        <link
+          rel="shortcut icon"
+          href="/assets/images/mylogo.webp"
+          type="image/x-icon"
+        />
+        <meta
+          name="description"
+          content="Personal portfolio and resume website"
+        />
       </head>
       <body>
-        {/* Vanta.js & Three.js scripts – loaded early */}
+        {/* NO sync script tags here */}
         <Script
           src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"
           strategy="beforeInteractive"
@@ -25,10 +32,8 @@ export default function RootLayout({ children }) {
           strategy="beforeInteractive"
         />
 
-        {/* Your animated background */}
         <BackgroundAnimation />
 
-        {/* Main content */}
         {children}
 
         {/* Ionicons */}
