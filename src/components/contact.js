@@ -52,7 +52,7 @@ export default function ContactPage({ isActive }) {
       </section>
 
       {/* Contact Form */}
-      <section className="contact-form">
+      {/* <section className="contact-form">
         <h3 className="h3 form-title">Contact Form</h3>
 
         <form className="form" onSubmit={handleSubmit} data-form>
@@ -95,7 +95,7 @@ export default function ContactPage({ isActive }) {
             <span>Send Message</span>
           </button>
         </form>
-      </section>
+      </section> */}
     </article>
   )
 }
