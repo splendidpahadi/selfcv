@@ -28,15 +28,15 @@ export default function AboutPage({ isActive, onOpenModal }) {
       name: "Henry William",
       text: "A results-driven professional! Priyanshu’s insights into IT strategy and automation have helped us optimize our business processes effectively.",
     },
-  ]
+  ];
 
   const handleTestimonialClick = (testimonial) => {
     onOpenModal({
       img: testimonial.avatar,
       title: testimonial.name,
       text: testimonial.text,
-    })
-  }
+    });
+  };
 
   return (
     <article className={`about ${isActive ? "active" : ""}`} data-page="about">
@@ -45,12 +45,27 @@ export default function AboutPage({ isActive, onOpenModal }) {
       </header>
 
       <section className="about-text">
-      <p>With over 5 years of experience in software development and technical project management, I specialize in Agile methodologies, full-stack development, and IT strategy to drive business efficiency. Currently, as a Technical Project Manager at Tech Arch Softwares, I oversee end-to-end project execution, ensuring smooth collaboration between teams, clients, and stakeholders.
-</p><p>
-I have worked with startups and enterprises to streamline development lifecycles, integrate AI-driven business solutions, and deliver scalable web applications. My expertise spans Laravel, React.js, MySQL, AWS Cloud, and automation using tools like ClickFunnels and Zoho.
-</p><p>
-I am passionate about technology-driven business optimization and continuously explore innovations in AI, cybersecurity, and cloud integration.
-</p></section>
+        <p>
+          Results-driven Technical Project Manager with 5+ years of
+          experience leading cross-functional teams and delivering
+          client-focused web and SaaS products. I specialize in Agile project
+          execution, requirement analysis, and technical delivery across
+          startups and mid-sized tech organizations.
+        </p>
+        <p>
+          My development background spans full-stack technologies including PHP,
+          Laravel, React.js, and MySQL. I’ve led projects from concept to
+          deployment using AWS, DigitalOcean, and CI/CD pipelines—balancing both
+          technical leadership and client-facing responsibilities.
+        </p>
+        <p>
+          I also implement low-code automation and CRM workflows using tools
+          like GoHighLevel, ClickFunnels, HubSpot, and Zoho. My passion lies in
+          streamlining processes and enabling business growth through strategic
+          planning, cloud integration, and emerging technologies such as AI and
+          cybersecurity.
+        </p>
+      </section>
 
       {/* Service Section */}
       <section className="service">
@@ -58,14 +73,35 @@ I am passionate about technology-driven business optimization and continuously e
 
         <ul className="service-list">
           {[
-            { title: "Technical Project Management", desc: "Leading Agile teams, defining project roadmaps, and ensuring timely delivery of high-quality software solutions.", icon: "/assets/images/icon-design.svg" },
-            { title: "Web Development", desc: "Building modern, scalable web applications using Laravel, PHP, React.js, and MySQL.", icon: "/assets/images/icon-dev.svg" },
-            { title: "IT Automation & CRM Solutions", desc: "Automating workflows using GHL, ClickFunnels, and Zoho, optimizing business processes.", icon: "/assets/images/icon-app.svg" },
-            { title: "AI & Cloud Integration", desc: "Enhancing business intelligence with AI-driven insights and cloud-based architectures.", icon: "/assets/images/icon-photo.svg" },
+            {
+              title: "Project & Delivery Management",
+              desc: "Managing end-to-end software delivery, sprint planning, and stakeholder communication using Agile, Scrum, and Kanban.",
+              icon: "/assets/images/icon-design.svg",
+            },
+            {
+              title: "Custom Web Development",
+              desc: "Building full-stack applications using Laravel, PHP, React.js, and MySQL with scalable deployment on AWS and DigitalOcean.",
+              icon: "/assets/images/icon-dev.svg",
+            },
+            {
+              title: "Automation & CRM Workflows",
+              desc: "Creating sales funnels and workflow automations using tools like GHL, ClickFunnels, Zoho, and HubSpot.",
+              icon: "/assets/images/icon-app.svg",
+            },
+            {
+              title: "Cloud & Tech Strategy",
+              desc: "Integrating AI concepts, cloud architectures, and secure infrastructure with a focus on business optimization.",
+              icon: "/assets/images/icon-photo.svg",
+            },
           ].map((service, index) => (
             <li key={index} className="service-item">
               <div className="service-icon-box">
-                <Image src={service.icon} alt={`${service.title} icon`} width={40} height={40} />
+                <Image
+                  src={service.icon}
+                  alt={`${service.title} icon`}
+                  width={40}
+                  height={40}
+                />
               </div>
               <div className="service-content-box">
                 <h4 className="h4 service-item-title">{service.title}</h4>
@@ -83,12 +119,23 @@ I am passionate about technology-driven business optimization and continuously e
         <ul className="testimonials-list has-scrollbar">
           {testimonials.map((testimonial) => (
             <li key={testimonial.id} className="testimonials-item">
-              <div className="content-card" data-testimonials-item onClick={() => handleTestimonialClick(testimonial)}>
+              <div
+                className="content-card"
+                data-testimonials-item
+                onClick={() => handleTestimonialClick(testimonial)}
+              >
                 <figure className="testimonials-avatar-box">
-                  <Image src={testimonial.avatar} alt={testimonial.name} width={60} height={80} />
+                  <Image
+                    src={testimonial.avatar}
+                    alt={testimonial.name}
+                    width={60}
+                    height={80}
+                  />
                 </figure>
 
-                <h4 className="h4 testimonials-item-title">{testimonial.name}</h4>
+                <h4 className="h4 testimonials-item-title">
+                  {testimonial.name}
+                </h4>
 
                 <div className="testimonials-text">
                   <p>{testimonial.text}</p>
@@ -114,5 +161,5 @@ I am passionate about technology-driven business optimization and continuously e
         </ul>
       </section> */}
     </article>
-  )
+  );
 }

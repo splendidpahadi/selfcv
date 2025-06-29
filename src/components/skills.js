@@ -2,36 +2,71 @@
 
 export default function SkillsPage({ isActive }) {
   const technologies = [
-  // Languages & Frameworks
-  "HTML", "CSS", "JS", "PHP", "Laravel", "React.js", "Python", "MySQL", "WordPress",
+    // Languages & Frameworks
+    "HTML",
+    "CSS",
+    "JS",
+    "PHP",
+    "Laravel",
+    "React.js",
+    "Python",
+    "MySQL",
+    "WordPress",
 
-  // DevOps & Cloud
-  "AWS", "Digital Ocean", "CI-CD", "Server Management", "Deployment",
+    // DevOps & Cloud
+    "AWS",
+    "Digital Ocean",
+    "CI-CD",
+    "Server Management",
+    "Deployment",
 
-  // Tools
-  "Git", "GitHub", "VS Code", "GHL", "ClickFunnels", "Notion", "Asana", "Trello",
-  "Basecamp", "ClickUp", "Google Workspace", "MS Office Suite", "SVN", "Jira",
+    // Tools
+    "Git",
+    "GitHub",
+    "VS Code",
+    "GHL",
+    "ClickFunnels",
+    "Notion",
+    "Asana",
+    "Trello",
+    "Basecamp",
+    "ClickUp",
+    "Google Workspace",
+    "MS Office Suite",
+    "SVN",
+    "Jira",
 
-  // Project & Process
-  "Agile", "Scrum", "Kanban", "Waterfall", "Roadmap Planning", "Project Estimation",
-  "Requirement Analysis", "Solution Optimization", "Team Leadership", "Client Communication",
+    // Project & Process
+    "Agile",
+    "Scrum",
+    "Kanban",
+    "Waterfall",
+    "Roadmap Planning",
+    "Project Estimation",
+    "Requirement Analysis",
+    "Solution Optimization",
+    "Team Leadership",
+    "Client Communication",
 
-  // Web & Marketing
-  "SEO", "REST API", "Automations", "HubSpot",
+    // Web & Marketing
+    "SEO",
+    "REST API",
+    "Automations",
+    "HubSpot",
 
-  // Certifications (Conceptual Knowledge)
-  "Cybersecurity Fundamentals", "AWS Cloud Practitioner", "Technical Support",
-  "AI & Digital Transformation", "Excel for Business Analysis"
-];
+    // Certifications (Conceptual Knowledge)
+    "Cybersecurity Fundamentals",
+    "AWS Cloud Practitioner",
+    "Technical Support",
+    "AI & Digital Transformation",
+    "Excel for Business Analysis",
+  ];
 
   return (
-    
     <article
       className={`skills ${isActive ? "active" : ""}`}
       data-page="skills"
     >
-
-        
       <header>
         <h2 className="h2 article-title">Skills &amp; Tech</h2>
       </header>
@@ -70,11 +105,16 @@ export default function SkillsPage({ isActive }) {
 
         <ul className="skills-list content-card">
           {[
-            { name: "Project Management", value: 75 },
-            { name: "Agile & Scrum Methodologies", value: 70 },
-            { name: "Web Development (PHP, Laravel, React.js)", value: 80 },
+            { name: "Project Management & Leadership", value: 85 },
+            { name: "Agile, Scrum & Kanban Methodologies", value: 80 },
+            {
+              name: "Web Development (PHP, Laravel, React.js, WordPress)",
+              value: 85,
+            },
             { name: "IT Strategy & Business Analysis", value: 80 },
-            { name: "Cloud Computing & AWS", value: 70 },
+            { name: "Cloud Platforms (AWS, DigitalOcean)", value: 75 },
+            { name: "CRM & Automation (GHL, ClickFunnels, Zoho)", value: 70 },
+            { name: "DevOps & CI/CD", value: 65 },
             { name: "Cybersecurity Fundamentals", value: 70 },
           ].map((skill, index) => (
             <li key={index} className="skills-item">
